@@ -1,0 +1,54 @@
+{% ckan_extends  %}
+
+{% block header_site_navigation_tabs %}
+{% set org_type = h.default_group_type('organization') %}
+{% set group_type = h.default_group_type('group') %}
+{% set dataset_type =  h.default_package_type() %}
+ 
+
+<!--nav class="navbar"-->
+  <!--ul-->
+  <li>
+    {% set url = h.url_for(dataset_type ~ '.search') %}
+    <a href={{url}}>{{h.humanize_entity_type('package', dataset_type, 'main nav') or _('Datasets')}}</a>
+    <ul>
+  {% for dataset in h.get_all_dataset_types() %}
+    {{ h.build_nav_main(
+      (dataset ~ '.search', h.humanize_entity_type('package', dataset, 'main nav') or _(dataset), ["dataset", "resource"]))
+    }}
+  {% endfor %}  
+    </ul>
+  </li>
+  
+  <li>
+   
+    {% set url = h.url_for(group_type ~ '.index') %}
+    <a href={{url}}>{{h.humanize_entity_type('group', group_type, 'main nav') or _('Groups')}}</a>
+    <ul>
+  {% for group in h.groups_available(true) %}
+      {% set type = group.type or group_type %}
+      {% set url = h.url_for(type ~ '.read', id=group.name) %}
+      <li><a href={{url}}>{{group.name}}</a></li>
+  {% endfor %}  
+    </ul>
+  </li>
+   
+  <li>
+   
+    {% set url = h.url_for(org_type ~ '.index') %}
+    <a href={{url}}>{{h.humanize_entity_type('organization', org_type, 'main nav') or _('Organizations')}}</a>
+    <ul>
+  {% for org in h.organizations_available({'permission': "read"}) %}
+      {% set type = org.type or org_type %}
+      {% set url = h.url_for(type ~ '.read', id=org.name) %}
+      <li><a href={{url}}>{{org.name}}</a></li>
+  {% endfor %}  
+    </ul>
+  </li>
+
+  {{ h.build_nav_main(
+       ('home.about', _('About')) ) 
+  }}
+ <!--/ul-->
+<!--/nav-->  
+{% endblock %}

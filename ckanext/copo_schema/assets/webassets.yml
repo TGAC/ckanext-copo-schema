@@ -1,0 +1,14 @@
+# copo_schema-js:
+#   filter: rjsmin
+#   output: ckanext-copo_schema/%(version)s-copo_schema.js
+#   contents:
+#     - js/copo_schema.js
+#   extra:
+#     preload:
+#       - base/main
+
+# copo_schema-css:
+#   filter: cssrewrite
+#   output: ckanext-copo_schema/%(version)s-copo_schema.css
+#   contents:
+#     - css/copo_schema.css

@@ -1,0 +1,113 @@
+scheming_version: 2
+dataset_type: read-dataset
+about: A implementation of the READ CKAN dataset schema
+about_url: http://github.com/ckan/ckanext-copo-schema
+
+
+dataset_fields:
+
+- field_name: title
+  label: Title
+  preset: title
+  form_placeholder: eg. Larry, Peter, Susan
+  
+- field_name: name
+  label: URL
+  preset: dataset_slug
+  form_placeholder: eg. my-dataset
+
+- field_name: contact_first_name
+  label: First Name
+  required: true
+  form_placeholder: eg. Please input contact first name 
+
+- field_name: contact_last_name
+  label: Last Name
+  required: true
+  form_placeholder: eg. Please input contact last name 
+
+- field_name: contact_email
+  label: Contact Email
+  form_placeholder: joe@example.com
+  display_property: dc:creator
+  display_snippet: email.html
+  #display_email_name_field: contact_last_name, contact_first_name
+
+- field_name: contact_institution
+  label: Institution
+  required: true
+  form_placeholder: eg. Please input contact institution 
+
+- field_name: owner_org
+  label: Organization
+  preset: dataset_organization
+
+- field_name: notes
+  label: Description
+  required: true
+  form_snippet: markdown.html
+  form_placeholder: eg. Please input decription 
+
+
+- field_name:  sample_ids 
+  label: Sample Ids
+  required: true
+  form_placeholder: eg. List of ENA sample ids separated by ","
+
+- field_name: assembly_accession
+  label: Assembly Accession
+  required: true
+  form_placeholder: eg. The assembly accession
+
+- field_name: GCA_ID
+  label: GCA ID
+  form_placeholder: eg. The GCA ID
+
+- field_name: contig_accession
+  label: Contig Accession
+  form_placeholder: eg. The Contig Accession
+
+- field_name: scaffold_accession
+  label: Scaffold Accession
+  form_placeholder: eg. The Scaffold Accession
+
+- field_name: chromosome_accession
+  label: Chromosome Accession
+  form_placeholder: eg. The Chromosome Accession
+
+- field_name: alternative_assembly_accession
+  label: Alternative Assembly Accession
+  form_placeholder: eg. Alternative Assembly Accession
+
+- field_name: assembly_date_accessed
+  label: Assembly Date Accessed
+  preset: date
+
+- field_name: version
+  label: Version
+  validators: ignore_missing unicode_safe package_version_validator
+  form_placeholder: '1.0'
+
+- field_name: container_resource
+  label: Container Resource
+  form_placeholder: either a link to singularity definition in CKAN, or a link to dockerhub
+
+- field_name: tag_string
+  label: Tags
+  preset: tag_string_autocomplete
+  form_placeholder: eg. economy, mental health, government
+
+resource_fields:
+
+- field_name: url
+  label: URL
+  preset: resource_url_upload
+
+- field_name: name
+  label: Name
+  form_placeholder: eg. January 2011 Gold Prices
+
+- field_name: description
+  label: Description
+  form_snippet: markdown.html
+  form_placeholder: Some useful notes about the data
