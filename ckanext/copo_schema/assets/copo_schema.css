@@ -1,14 +1,15 @@
-.masthead {background-color: #C61F16 !important;}
+.masthead {background: #C61F16 !important; }
 .media-heading{display: none !important;}
 .placeholder{}
-.img-responsive{display:none important;}
+.img-fluid{display:none !important;}
 .media-image{background: url("/base/images/frontpage.jpg") !important; height: 450px !important;}
-.account-masthead {background-color: #850001 !important;}
-.site-footer {background-color: #C61F16 important;}
+.account-masthead{background-color: #850001 !important;}
 .module-content header p{font-style: oblique}
 .list-unstyled{border: 0}
-body{ background-color: #C61F16 !important;}
+body .search-form .site-footer { background-color: #C61F16 !important;}
 .account-masthead .account ul li {border-left: none}
+.homepage .module-search .tags {background-color: #98362 !important;}
+
 
 .navbar {
     /*background-color: #333;*/
