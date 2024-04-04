@@ -7,8 +7,8 @@
 #     preload:
 #       - base/main
 
-# copo_schema-css:
-#   filter: cssrewrite
-#   output: ckanext-copo_schema/%(version)s-copo_schema.css
-#   contents:
-#     - css/copo_schema.css
+copo_schema-css:
+   filter: cssrewrite
+   output: ckanext-copo_schema/%(version)s-copo_schema.css
+   contents:
+     - css/copo_schema.css
