@@ -6,9 +6,10 @@
 .account-masthead{background-color: #850001 !important;}
 .module-content header p{font-style: oblique}
 .list-unstyled{border: 0}
-body .search-form .site-footer { background-color: #C61F16 !important;}
+body { background-color: #C61F16 !important;}
+.search-form .site-footer { background-color: #C61F16 !important;}
 .account-masthead .account ul li {border-left: none}
-.homepage .module-search .tags {background-color: #98362 !important;}
+.homepage .module-search .tags {background-color: #983627 !important;}
 
 
 .navbar {
