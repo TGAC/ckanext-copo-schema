@@ -1,3 +1,15 @@
+.masthead {background-color: #C61F16;}
+.media-heading{display: none}
+.placeholder{}
+.img-responsive{display:none}
+.media-image{background: url("/base/images/frontpage.jpg");height: 450px}
+.account-masthead {background-color: #850001;}
+.site-footer {background-color: #C61F16;}
+.module-content header p{font-style: oblique;}
+.list-unstyled{border: 0}
+body{ background-color: #C61F16;}
+.account-masthead .account ul li {border-left: none}
+
 .navbar {
     /*background-color: #333;*/
     position: relative;
