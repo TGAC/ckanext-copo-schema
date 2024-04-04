@@ -1,13 +1,13 @@
-.masthead {background-color: #C61F16;}
-.media-heading{display: none}
+.masthead {background-color: #C61F16 !important;}
+.media-heading{display: none !important;}
 .placeholder{}
-.img-responsive{display:none}
-.media-image{background: url("/base/images/frontpage.jpg");height: 450px}
-.account-masthead {background-color: #850001;}
-.site-footer {background-color: #C61F16;}
-.module-content header p{font-style: oblique;}
+.img-responsive{display:none important;}
+.media-image{background: url("/base/images/frontpage.jpg") !important; height: 450px !important;}
+.account-masthead {background-color: #850001 !important;}
+.site-footer {background-color: #C61F16 important;}
+.module-content header p{font-style: oblique}
 .list-unstyled{border: 0}
-body{ background-color: #C61F16;}
+body{ background-color: #C61F16 !important;}
 .account-masthead .account ul li {border-left: none}
 
 .navbar {
